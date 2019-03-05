@@ -15,17 +15,12 @@
     NSLog(@"\nimage downloaded\n");
     let url = [[NSURL alloc] initWithString: link];
     [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        
-        NSLog(@"errors %@", error);
         let image = [[UIImage alloc] initWithData:data];
-        
         dispatch_async(dispatch_get_main_queue(), ^{
             self.image = image;
             onFinished();
         });
     }] resume];
-    
-    
     
 }
 
