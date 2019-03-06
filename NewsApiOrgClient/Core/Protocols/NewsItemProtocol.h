@@ -1,17 +1,16 @@
 //
-//  NewsItem.h
+//  NewsItemProtocol.h
 //  NewsApiOrgClient
 //
-//  Created by Kirill Khudiakov on 05/03/2019.
+//  Created by Kirill Khudiakov on 06/03/2019.
 //  Copyright © 2019 Kirill Khudiakov. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "NewsItemProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NewsItem : NSObject <NewsItemProtocol>
+@protocol NewsItemProtocol <NSObject>
 
 @property (strong, readwrite) NSString* title;
 @property (strong, readwrite) NSString* desc;

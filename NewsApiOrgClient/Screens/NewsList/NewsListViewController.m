@@ -8,6 +8,7 @@
 
 #import "NewsListViewController.h"
 #import "KKSugar.h"
+#import "NewsItemProtocol.h"
 #import "NewsItem.h"
 #import "NewsDetailViewController.h"
 
@@ -36,7 +37,6 @@
     
     [_viewModel loadNews: ^{
         dispatch_async(dispatch_get_main_queue(), ^{
-            
             [self.tableView reloadData];
         });
     }] ;
@@ -60,7 +60,7 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     let cell = [tableView dequeueReusableCellWithIdentifier:@"defaultCell"];
-    NewsItem* model = _viewModel.items[indexPath.row];
+    id <NewsItemProtocol> model = _viewModel.items[indexPath.row];
     cell.textLabel.text = model.title;
     return cell;
 }

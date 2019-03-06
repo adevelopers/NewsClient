@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "NewsItem.h"
+#import "NewsItemProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NewsDetailViewModel : NSObject
 
-@property (strong) NewsItem* model;
+@property (strong) id <NewsItemProtocol> model;
+
+- (BOOL)hasImage;
 
 @end
 

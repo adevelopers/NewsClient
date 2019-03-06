@@ -9,9 +9,6 @@
 #import "NewsService.h"
 
 
-NSString* const HOST = @"?q=&from=&sortBy=publishedAt";
-
-
 @implementation NewsService
 
 + (id)sharedInstance {
