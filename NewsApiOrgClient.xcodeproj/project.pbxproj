@@ -43,6 +43,7 @@
 		FA35E773222EE6C900A959C5 /* NewsDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewModel.m; sourceTree = "<group>"; };
 		FA35E775222EF89200A959C5 /* UIImageView+downloaded.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+downloaded.h"; sourceTree = "<group>"; };
 		FA35E776222EF89200A959C5 /* UIImageView+downloaded.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+downloaded.m"; sourceTree = "<group>"; };
+		FAE82CAC222FAE36000567BA /* NewsItemProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsItemProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +159,7 @@
 		FA2A6E42222E078A000104CA /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FAE82CAB222FAE09000567BA /* Protocols */,
 				FA2A6E43222E0795000104CA /* KKSugar.h */,
 			);
 			path = Core;
@@ -194,6 +196,14 @@
 				FA2A6DD5222D6421000104CA /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		FAE82CAB222FAE09000567BA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAE82CAC222FAE36000567BA /* NewsItemProtocol.h */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
