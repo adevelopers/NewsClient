@@ -22,7 +22,6 @@
     [self setupConstraints];
     self.imageView.alpha = 0;
     
-    
     _titleLabel.text = self.viewModel.model.title;
     _desciptionView.text = self.viewModel.model.desc;
     
