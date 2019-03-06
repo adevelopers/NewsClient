@@ -10,6 +10,12 @@
 
 @implementation NewsDetailViewModel
 
-
+- (BOOL)hasImage {
+    if (self.model.urlToImage == (id)[NSNull null] || self.model.urlToImage.length == 0 ) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
 
 @end

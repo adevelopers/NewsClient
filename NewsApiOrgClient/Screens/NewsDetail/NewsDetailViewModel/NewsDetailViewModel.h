@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong) NewsItem* model;
 
+- (BOOL)hasImage;
+
 @end
 
 NS_ASSUME_NONNULL_END

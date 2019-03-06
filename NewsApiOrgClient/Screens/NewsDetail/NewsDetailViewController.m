@@ -26,13 +26,15 @@
     _titleLabel.text = self.viewModel.model.title;
     _desciptionView.text = self.viewModel.model.desc;
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.imageView downloadedFromLink: self.viewModel.model.urlToImage onFinished:^{
-            [UIView animateWithDuration:1 animations:^{
-                self.imageView.alpha = 1;
+    if ([self.viewModel hasImage] == YES) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.imageView downloadedFromLink: self.viewModel.model.urlToImage onFinished:^{
+                [UIView animateWithDuration:1 animations:^{
+                    self.imageView.alpha = 1;
+                }];
             }];
-        }];
-    });
+        });
+    }
 }
 
 - (void)addUI {
